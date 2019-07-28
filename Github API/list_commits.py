@@ -3,6 +3,12 @@ import dateutil.parser
 from pyfiglet import figlet_format
 from termcolor import colored
 
+#for support in windows of pyfiglet and termcolor
+import sys
+from colorama import init
+init(strip=not sys.stdout.isatty())
+#-----------------------------------------------
+
 header = figlet_format("COMMITS")
 title = colored(header, color="cyan")
 print(title)
